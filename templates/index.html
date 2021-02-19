@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+  </head>
+  <body>
+    <a href="https://notetakingapp.spotsign.repl.co/create"><button>Create new note</button></a>
+    {% for note in data %}
+    <a href="https://notetakingapp.spotsign.repl.co/view/{{note['id']}}">
+    <div style="border: solid black;color:black;width:20%;">
+      <h3>{{note['title']}}</h3>
+      <h5>By {{note['author']}}</h5>
+      <h5><em>{{note['time']}}</em></h5>
+    </div>
+    </a>
+    {% endfor %}
+  </body>
+</html>
